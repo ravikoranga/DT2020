@@ -1,0 +1,22 @@
+<html>
+  <head>
+        <!-- include A-Frame obviously -->
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+        <!-- include ar.js for A-Frame -->
+        <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+        <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.min.js"></script>
+  </head>
+  <body style="margin : 0px; overflow: hidden;">
+  <a-scene embedded arjs>
+      <a-assets>
+            <!-- model https://sketchfab.com/3d-models/low-poly-character-rpg-kit-animation-904c06fc53574534a3aace8dba79f796 -->
+        <a-asset-item id="tree" src="3d Mod/dark times 2020 playing card final.glb"></a-asset-item>
+      </a-assets>
+    <a-entity light="type:directional; castShadow:true;" position="1 1 1"></a-entity>
+  <a-marker-camera preset="custom" url='marker/pattern-pattern-AR Card 01.patt'>
+           <a-entity gltf-model="#tree" scale="0.1 0.1 0.1" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-entity>
+            </a-entity>
+    </a-marker-camera>
+  </a-scene>
+</body>
+</html>
